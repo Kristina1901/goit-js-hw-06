@@ -12,3 +12,60 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+console.log(images);
+// const galleryListEl = document.querySelector('#gallery');
+// for (let i = 0; i < images.length; i += 1) {
+//   const picture = document.createElement('li');
+//   console.log(picture);
+//  galleryListEl.insertAdjacentElement('beforeEnd', picture);
+// }
+// const galleryEl = document.querySelector('li');
+// const portfolioList = image => {
+//   const {url, alt} = image
+// }
+
+const makeGallerylist = image => {
+  const { url, alt } = image;
+    return `
+  <li>
+    <img src="${image.url}" alt="${image.alt}">
+    </li>
+  `;
+  }
+const galleryListEl = document.querySelector(".gallery");
+
+const makeGallerylistRow = images.map(makeGallerylist)
+  .join('');
+galleryListEl.insertAdjacentHTML('beforeend', makeGallerylistRow)
+
+let imgElf = document.querySelectorAll('img')[0];
+imgElf.style.width = "300px";
+imgElf.style.height = "200px";
+imgElf.style.display = "block";
+const imgElc = document.querySelectorAll('img')[1];
+imgElc.style.width = "300px";
+imgElc.style.height = "200px";
+imgElc.style.display = "block";
+const imgElt = document.querySelectorAll('img')[2];
+imgElt.style.width = "300px";
+imgElt.style.height = "200px";
+imgElt.style.display = "block";
+
+
+let elem = document.querySelectorAll('ul');
+let elemcol = [...elem];
+for (let i = 0; i < elemcol.length; i++) {
+      elemcol[i].style.display = "flex";
+      elemcol[i].type = "none";
+      
+}
+  
+const items = document.querySelectorAll('li');
+for (let i = 0; i < items.length; i++) {
+      items[i].style.marginRight = "15px";
+}
+    
+console.log(makeGallerylistRow);
+
+
+
