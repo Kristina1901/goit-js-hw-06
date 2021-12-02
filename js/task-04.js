@@ -1,24 +1,37 @@
 let counterValue = 0;
 
+let total = document.querySelector('#value');
+
+
+
+
+
+
 
 const decrementNumber = document.querySelector('button[data-action="decrement"]');
+
  const handleClick = () => {
-  console.log(counterValue -= 1);
+    counterValue -= 1;
+   total.textContent = counterValue;
+   
+  
+   
+  
 };
 decrementNumber.addEventListener("click", handleClick);
-
- 
-
-
 
 
 
 
 let incrementNumber = document.querySelector('button[data-action="increment"]');
+
 const handleClicksec = () => {
-  console.log(counterValue += 1);
+  counterValue += 1;
+  total.textContent = counterValue;
 };
 
+
 incrementNumber.addEventListener("click", handleClicksec);
+
 
 
