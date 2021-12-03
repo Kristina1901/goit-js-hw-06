@@ -7,7 +7,7 @@ function getRandomHexColor() {
 
 const button = document.querySelector('button');
 const paragrafText = document.querySelector(".color");
-const color = document.querySelector(".widget")
+const color = document.body;
 
 
 
