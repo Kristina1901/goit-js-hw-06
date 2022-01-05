@@ -6,15 +6,10 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
+const ingredientsList= document.querySelector('ul')
 
-for (let i = 0; i < ingredients.length; i += 1) {
-   const items = document.createElement('li');
-   const list = document.querySelector('ul')
 
-  list.appendChild(items);
-  items.textContent = ingredients[i];
-   console.log(items.textContent);
- 
-}
+const list = ingredients.reduce((str, item) => str + `<li>${item}</li>`, '');
 
+ingredientsList.innerHTML = list;
 
