@@ -14,5 +14,5 @@ const body = document.body;
 
 button.addEventListener("click", function() {            
   paragrafText.textContent = getRandomHexColor()
-  color.style.backgroundColor =  paragrafText.textContent
+  body.style.backgroundColor =  paragrafText.textContent
   });
