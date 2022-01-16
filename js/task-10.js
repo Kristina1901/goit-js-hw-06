@@ -10,12 +10,64 @@
 const buttonCreate = document.querySelector("[data-create]");
 const inputValue = document.querySelector('#controls input');
 const buttonDestroy = document.querySelector("[data-destroy]");
-const boxes = document.querySelector('#boxes');
-let collection = 0
-function createBoxes(amount) {
-   collection = inputValue.value
-    console.log(Array.apply(null, {length: collection}).map(Number.call, Number))
-    
+const boxes = document.getElementById("boxes")
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+
+
+
+
+let newarr = []
+
+
+function createBoxes(amount) {
+   
+    amount = inputValue.value
+    
+    let newarr = []
+    
+       
+   
+   
+    for (let i = 0; i < amount; i += 1) {
+        
+        let newEl = document.createElement("div")
+        newEl.style.backgroundColor = getRandomHexColor()
+        newEl.classList.add("new-class")
+        newEl.style.width = (30 + (i * 10)) + 'px';
+        newEl.style.height = (30 + (i * 10))+'px';
+       
+    
+    
+       newarr.push (newEl) 
+      
+           
+        
+                  
+       
+      
+        
+      
+          
+    
+        
+    }
+    
+    
+     
+   
+   boxes.append(...newarr);
+      
+   
+        
+}
+function destroy() {
+   boxes.innerHTML = '';
+} 
+  
+
 buttonCreate.addEventListener("click", createBoxes)
+buttonDestroy.addEventListener("click", destroy)
 
