@@ -43,16 +43,6 @@ function createBoxes(amount) {
     
        newarr.push (newEl) 
       
-           
-        
-                  
-       
-      
-        
-      
-          
-    
-        
     }
     
     
